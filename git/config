@@ -1,0 +1,10 @@
+[user]
+	name = alanaudi
+	email = alanaudi.tw@gmail.com
+[alias]
+	s = status
+	co = checkout
+	cb = checkout -b
+	cm = commit -m
+[core]
+	excludesfile = /home/alanaudi/.config/git/ignore.global
