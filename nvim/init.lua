@@ -40,8 +40,8 @@ vim.cmd 'autocmd BufWritePost packer.lua PackerCompile'
 --
 -- -----------------------------------------------------------------------------
 local modules = {
-  'settings',
-  'plugins/packer',
+  'settings',                                                                    -- basic settings
+  'plugins/packer',                                                              -- package manager
 }
 
 for i = 1, #modules, 1 do
