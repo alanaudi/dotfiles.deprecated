@@ -8,6 +8,7 @@
 --  updated_at: 20211023
 -- -----------------------------------------------------------------------------
 
+local cmd = vim.cmd
 local fn = vim.fn
 local execute = vim.api.nvim_command
 
@@ -26,9 +27,9 @@ local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
   execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
 end
-vim.cmd [[packadd packer.nvim]]
+cmd [[packadd packer.nvim]]
 -- Auto compile when there are changes in plugins.lua
-vim.cmd 'autocmd BufWritePost packer.lua PackerCompile'
+cmd 'autocmd BufWritePost packer.lua PackerCompile'
 
 
 -- -----------------------------------------------------------------------------
@@ -44,7 +45,8 @@ local modules = {
   'plugins/packer',                                                              -- package manager
   'plugins/autosave',
   'plugins/gitsigns',
-  'plugins/statusline'
+  'plugins/statusline',
+  'plugins/neoscroll'
 }
 
 for i = 1, #modules, 1 do
