@@ -1,0 +1,6 @@
+venv/
+
+AIM-500
+MNIST/
+
+hydra/

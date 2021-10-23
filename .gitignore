@@ -1,3 +1,4 @@
 # plugins clone by vim-plug
 nvim/plugged/
-
+# plugins compiled by packer.nvim
+nvim/plugin
