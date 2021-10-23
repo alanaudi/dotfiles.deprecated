@@ -50,8 +50,8 @@ local config = {
   sections = {
     -- these are to remove the defaults
     lualine_a = {},
-    lualine_b = {},
-    lualine_y = {},
+    -- lualine_b = {},
+    -- lualine_y = {},
     lualine_z = {},
     -- These will be filled later
     lualine_c = {},
@@ -59,12 +59,12 @@ local config = {
   },
   inactive_sections = {
     -- these are to remove the defaults
-    lualine_a = {},
-    lualine_v = {},
-    lualine_y = {},
-    lualine_z = {},
-    lualine_c = {},
-    lualine_x = {},
+    -- lualine_a = {},
+    -- lualine_v = {},
+    -- lualine_y = {},
+    -- lualine_z = {},
+    -- lualine_c = {},
+    -- lualine_x = {},
   },
 }
 

@@ -23,7 +23,7 @@ return require'packer'.startup(function(use) -----------------------------------
   use {
     'numToStr/Comment.nvim',
     config = function()
-      require('Comment').setup()
+      require'Comment'.setup()
     end
   }
 
@@ -31,7 +31,7 @@ return require'packer'.startup(function(use) -----------------------------------
   use {
     'Pocco81/AutoSave.nvim',
     config = function()
-      require('autosave').setup(
+      require'autosave'.setup(
         {
           enabled = true,
           execution_message =
@@ -52,13 +52,47 @@ return require'packer'.startup(function(use) -----------------------------------
     end
   }
 
+
   -- git
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
     tag = 'release',                                                             -- use latest version
     config = function()
-      require('gitsigns').setup()
+      require'gitsigns'.setup({
+        signs = {
+          add = {
+            hl = 'GitSignsAdd',
+            text = '▌',
+            numhl='GitSignsAddNr',
+            linehl='GitSignsAddLn'
+          },
+          change = {
+            hl = 'GitSignsChange',
+            text = '▌',
+            numhl='GitSignsChangeNr',
+            linehl='GitSignsChangeLn'
+          },
+          delete = {
+            hl = 'GitSignsDelete',
+            text = '▌',
+            numhl='GitSignsDeleteNr',
+            linehl='GitSignsDeleteLn'
+          },
+          topdelete    = {
+            hl = 'GitSignsDelete',
+            text = '▌',
+            numhl='GitSignsDeleteNr',
+            linehl='GitSignsDeleteLn'
+          },
+          changedelete = {
+            hl = 'GitSignsChange',
+            text = '▌',
+            numhl='GitSignsChangeNr',
+            linehl='GitSignsChangeLn'
+          }
+        }
+      })
     end
   }
 
@@ -69,6 +103,18 @@ return require'packer'.startup(function(use) -----------------------------------
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    config = function()
+      require'lualine'.setup(
+        {
+          options = {
+            theme = 'onedark',
+            component_separators = '',
+            section_separators = '',
+            disabled_filetypes = {}
+          }
+        }
+      )
+    end
   }
 
 end) ---------------------------------------------------------------------------
