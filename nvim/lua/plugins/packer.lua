@@ -54,4 +54,13 @@ return require'packer'.startup(function(use) -----------------------------------
   -- scroll
   use 'karb94/neoscroll.nvim'
 
+  -- fzf
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { 'nvim-lua/plenary.nvim' },
+  }
+
+  -- jk
+  use 'xiyaowong/accelerated-jk.nvim'
+
 end) ---------------------------------------------------------------------------
