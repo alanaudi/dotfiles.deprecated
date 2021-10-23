@@ -2,6 +2,7 @@
 " Neovim 0.5.1
 "
 " author: alanaudi
+" repo: https://github.com:alanaudi/dotfiles
 " created_at: 20211023
 " updated_at: 20211023
 "-------------------------------------------------------------------------------
