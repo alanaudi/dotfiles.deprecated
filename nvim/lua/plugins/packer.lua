@@ -22,34 +22,13 @@ return require'packer'.startup(function(use) -----------------------------------
   -- comment
   use {
     'numToStr/Comment.nvim',
-    config = function()
-      require'Comment'.setup()
-    end
+    config = function() require'Comment'.setup() end
   }
 
   -- save
   use {
     'Pocco81/AutoSave.nvim',
-    config = function()
-      require'autosave'.setup(
-        {
-          enabled = true,
-          execution_message =
-            "AutoSave: saved at "..vim.fn.strftime("%H:%M:%S"),
-          events = { "InsertLeave", "TextChanged" },
-          conditions = {
-            exists = true,
-            filename_is_not = {},
-            filetype_is_not = {},
-            modifiable = true
-          },
-          write_all_buffers = false,
-          on_off_commands = true,
-          clean_command_line_interval = 0,
-          debounce_delay = 135
-        }
-      )
-    end
+    config = function() require'autosave' end
   }
 
 
@@ -58,63 +37,28 @@ return require'packer'.startup(function(use) -----------------------------------
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
     tag = 'release',                                                             -- use latest version
-    config = function()
-      require'gitsigns'.setup({
-        signs = {
-          add = {
-            hl = 'GitSignsAdd',
-            text = '▌',
-            numhl='GitSignsAddNr',
-            linehl='GitSignsAddLn'
-          },
-          change = {
-            hl = 'GitSignsChange',
-            text = '▌',
-            numhl='GitSignsChangeNr',
-            linehl='GitSignsChangeLn'
-          },
-          delete = {
-            hl = 'GitSignsDelete',
-            text = '▌',
-            numhl='GitSignsDeleteNr',
-            linehl='GitSignsDeleteLn'
-          },
-          topdelete    = {
-            hl = 'GitSignsDelete',
-            text = '▌',
-            numhl='GitSignsDeleteNr',
-            linehl='GitSignsDeleteLn'
-          },
-          changedelete = {
-            hl = 'GitSignsChange',
-            text = '▌',
-            numhl='GitSignsChangeNr',
-            linehl='GitSignsChangeLn'
-          }
-        }
-      })
-    end
+    config = function() require'gitsigns' end
   }
 
   -- syntax highlight
   use { 'cespare/vim-toml' }
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate',
+    config = function() require'treesitter' end
+  }
 
   -- status line
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = function()
-      require'lualine'.setup(
-        {
-          options = {
-            theme = 'onedark',
-            component_separators = '',
-            section_separators = '',
-            disabled_filetypes = {}
-          }
-        }
-      )
-    end
+    config = function() require'statusline' end
+  }
+
+  -- parent
+  use {
+    'windwp/nvim-autopairs',
+    config = function() require'nvim-autopairs'.setup() end
   }
 
 end) ---------------------------------------------------------------------------
