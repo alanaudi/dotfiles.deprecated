@@ -56,10 +56,13 @@ return require'packer'.startup(function(use) -----------------------------------
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    tag = 'release',                                                            -- use latest version
+    tag = 'release',                                                             -- use latest version
     config = function()
       require('gitsigns').setup()
     end
   }
+
+  -- syntax highlight
+  use {'cespare/vim-toml'}
 
 end) ---------------------------------------------------------------------------
