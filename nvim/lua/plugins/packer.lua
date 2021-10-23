@@ -8,16 +8,16 @@ cmd [[packadd packer.nvim]]
 return require'packer'.startup(function(use) -----------------------------------
 
   -- packer itself
-  use {'wbthomason/packer.nvim', opt = true}
+  use { 'wbthomason/packer.nvim', opt = true }
 
   -- autocomplete
-  use {'ervandew/supertab'}
+  use { 'ervandew/supertab' }
 
   -- colorscheme / theme
-  use {'haishanh/night-owl.vim'}
+  use { 'haishanh/night-owl.vim' }
 
   -- config
-  use {'editorconfig/editorconfig-vim'}
+  use { 'editorconfig/editorconfig-vim' }
 
   -- comment
   use {
@@ -36,7 +36,7 @@ return require'packer'.startup(function(use) -----------------------------------
           enabled = true,
           execution_message =
             "AutoSave: saved at "..vim.fn.strftime("%H:%M:%S"),
-          events = {"InsertLeave", "TextChanged"},
+          events = { "InsertLeave", "TextChanged" },
           conditions = {
             exists = true,
             filename_is_not = {},
@@ -63,6 +63,12 @@ return require'packer'.startup(function(use) -----------------------------------
   }
 
   -- syntax highlight
-  use {'cespare/vim-toml'}
+  use { 'cespare/vim-toml' }
+
+  -- status line
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+  }
 
 end) ---------------------------------------------------------------------------
