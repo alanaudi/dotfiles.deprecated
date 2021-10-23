@@ -11,13 +11,13 @@ return require'packer'.startup(function(use) -----------------------------------
   use { 'wbthomason/packer.nvim', opt = true }
 
   -- autocomplete
-  use { 'ervandew/supertab' }
+  use 'ervandew/supertab'
 
   -- colorscheme / theme
-  use { 'haishanh/night-owl.vim' }
+  use 'haishanh/night-owl.vim'
 
   -- config
-  use { 'editorconfig/editorconfig-vim' }
+  use 'editorconfig/editorconfig-vim'
 
   -- comment
   use {
@@ -26,33 +26,23 @@ return require'packer'.startup(function(use) -----------------------------------
   }
 
   -- save
-  use {
-    'Pocco81/AutoSave.nvim',
-    config = function() require'autosave' end
-  }
-
+  use 'Pocco81/AutoSave.nvim'
 
   -- git
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
-    tag = 'release',                                                             -- use latest version
-    config = function() require'gitsigns' end
+    tag = 'release'
   }
 
   -- syntax highlight
-  use { 'cespare/vim-toml' }
-  use {
-    'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate',
-    config = function() require'treesitter' end
-  }
+  use 'cespare/vim-toml'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- status line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
-    config = function() require'statusline' end
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
   -- parent
