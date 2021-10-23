@@ -47,7 +47,8 @@ local modules = {
   'plugins/gitsigns',
   'plugins/statusline',
   'plugins/neoscroll',
-  'plugins/jk'
+  'plugins/jk',
+  'plugins/color'
 }
 
 for i = 1, #modules, 1 do

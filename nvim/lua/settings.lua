@@ -10,6 +10,7 @@ opt.colorcolumn = '80'                                                          
 opt.cursorline = true                                                            -- highlight current line
 opt.mouse = 'a'                                                                  -- enable mouse support
 opt.number = true                                                                -- show line number
+opt.termguicolors = true
 
 -- theme
 cmd [[colorscheme night-owl]]

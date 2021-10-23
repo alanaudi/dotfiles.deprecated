@@ -63,4 +63,7 @@ return require'packer'.startup(function(use) -----------------------------------
   -- jk
   use 'xiyaowong/accelerated-jk.nvim'
 
+  -- color
+  use 'norcalli/nvim-colorizer.lua'
+
 end) ---------------------------------------------------------------------------
