@@ -48,7 +48,8 @@ local modules = {
   'plugins/statusline',
   'plugins/neoscroll',
   'plugins/jk',
-  'plugins/color'
+  'plugins/color',
+  'plugins/theme'
 }
 
 for i = 1, #modules, 1 do

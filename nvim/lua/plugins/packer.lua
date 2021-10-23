@@ -14,7 +14,7 @@ return require'packer'.startup(function(use) -----------------------------------
   use 'ervandew/supertab'
 
   -- colorscheme / theme
-  use 'haishanh/night-owl.vim'
+  use 'projekt0n/github-nvim-theme'
 
   -- config
   use 'editorconfig/editorconfig-vim'
