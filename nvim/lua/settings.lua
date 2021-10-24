@@ -11,3 +11,5 @@ opt.cursorline = true                                                           
 opt.mouse = 'a'                                                                  -- enable mouse support
 opt.number = true                                                                -- show line number
 opt.termguicolors = true
+
+-- cmd[[colorscheme catppuccino]]

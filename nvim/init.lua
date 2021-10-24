@@ -46,10 +46,11 @@ local modules = {
   'plugins/autosave',
   'plugins/gitsigns',
   'plugins/statusline',
+  'plugins/theme',
   'plugins/neoscroll',
   'plugins/jk',
   'plugins/color',
-  'plugins/theme'
+  'plugins/bufferline',
 }
 
 for i = 1, #modules, 1 do

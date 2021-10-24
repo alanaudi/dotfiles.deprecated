@@ -14,6 +14,7 @@ return require'packer'.startup(function(use) -----------------------------------
   use 'ervandew/supertab'
 
   -- colorscheme / theme
+  -- use 'Pocco81/Catppuccino.nvim'
   use 'projekt0n/github-nvim-theme'
 
   -- config
@@ -65,5 +66,14 @@ return require'packer'.startup(function(use) -----------------------------------
 
   -- color
   use 'norcalli/nvim-colorizer.lua'
+
+  -- tabout
+  use 'abecodes/tabout.nvim'
+
+  -- tabs
+  use {
+    'romgrk/barbar.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' }
+  }
 
 end) ---------------------------------------------------------------------------
