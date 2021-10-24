@@ -106,4 +106,22 @@ return require'packer'.startup(function(use) -----------------------------------
     -- config = function() require'neogit'.setup() end
   }
 
+  -- todo
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+    config = function()
+      require("todo-comments").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+      end
+  }
+
+  -- org-mode
+  use {
+    'kristijanhusak/orgmode.nvim',
+    config = function() require('orgmode').setup() end
+  }
 end) ---------------------------------------------------------------------------
