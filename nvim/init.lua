@@ -51,7 +51,8 @@ local modules = {
   'plugins/jk',
   'plugins/color',
   'plugins/bufferline',
-  'plugins/hop'
+  'plugins/hop',
+  'plugins/indent',
 }
 
 for i = 1, #modules, 1 do

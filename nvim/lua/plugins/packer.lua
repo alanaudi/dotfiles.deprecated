@@ -86,4 +86,7 @@ return require'packer'.startup(function(use) -----------------------------------
     end
   }
 
+  -- indent
+  use 'lukas-reineke/indent-blankline.nvim'
+
 end) ---------------------------------------------------------------------------
