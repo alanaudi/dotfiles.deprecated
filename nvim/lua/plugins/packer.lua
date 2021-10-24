@@ -89,4 +89,11 @@ return require'packer'.startup(function(use) -----------------------------------
   -- indent
   use 'lukas-reineke/indent-blankline.nvim'
 
+  -- startup time
+  use 'dstein64/vim-startuptime'
+
+  -- animation focus
+  use 'camspiers/animate.vim'
+  use 'camspiers/lens.vim'
+
 end) ---------------------------------------------------------------------------
