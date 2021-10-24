@@ -76,4 +76,14 @@ return require'packer'.startup(function(use) -----------------------------------
     requires = { 'kyazdani42/nvim-web-devicons' }
   }
 
+  -- faster
+  use {
+    'phaazon/hop.nvim',
+    as = 'hop',
+    config = function()
+      -- you can configure Hop the way you like here; see :h hop-config
+      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+    end
+  }
+
 end) ---------------------------------------------------------------------------

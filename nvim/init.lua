@@ -51,6 +51,7 @@ local modules = {
   'plugins/jk',
   'plugins/color',
   'plugins/bufferline',
+  'plugins/hop'
 }
 
 for i = 1, #modules, 1 do
