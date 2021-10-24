@@ -82,7 +82,7 @@ return require'packer'.startup(function(use) -----------------------------------
     as = 'hop',
     config = function()
       -- you can configure Hop the way you like here; see :h hop-config
-      require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      require'hop'.setup { keys = 'weruioasdfghjklxcvbnm' }
     end
   }
 
