@@ -13,3 +13,94 @@
 --     indent = {enable = true},
 --     highlight = {enable = true}
 -- }
+
+
+-- treesitter object
+-- require'nvim-treesitter.configs'.setup {
+--   textobjects = {
+--     select = {
+--       enable = true,
+--
+--       -- Automatically jump forward to textobj, similar to targets.vim
+--       lookahead = true,
+--
+--       keymaps = {
+--         -- You can use the capture groups defined in textobjects.scm
+--         ["af"] = "@function.outer",
+--         ["if"] = "@function.inner",
+--         ["ac"] = "@class.outer",
+--         ["ic"] = "@class.inner",
+--
+--         -- Or you can define your own textobjects like this
+--         ["iF"] = {
+--           python = "(function_definition) @function",
+--           cpp = "(function_definition) @function",
+--           c = "(function_definition) @function",
+--           java = "(method_declaration) @function",
+--         },
+--       },
+--     },
+--   },
+-- }
+-- require'nvim-treesitter.configs'.setup {
+--  textobjects = {
+--     select = {
+--       enable = true,
+--       lookahead = true,
+--       keymaps = {
+--         ["ax"] = "@attribute.outer",
+--         ["ix"] = "@attribute.inner",
+--
+--         ["am"] = "@import.outer",
+--         ["im"] = "@import.inner",
+--
+--         ["a,"] = "@lhs.outer",
+--         ["i,"] = "@lhs.inner",
+--         ["a."] = "@rhs.outer",
+--         ["i."] = "@rhs.inner",
+--
+--         ["ad"] = "@declaration.outer",
+--         ["id"] = "@declaration.inner",
+--
+--         ["ar"] = "@rule.outer",
+--         ["ir"] = "@rule.inner",
+--
+--         ["af"] = "@function.outer",
+--         ["if"] = "@function.inner",
+--         ["aC"] = "@class.outer",
+--         ["iC"] = "@class.inner",
+--         ["ac"] = "@call.outer",
+--         ["ic"] = "@call.inner",
+--
+--         ["a;"] = "@block.outer",
+--         ["i;"] = "@block.inner",
+--
+--         ["ak"] = "@key.outer",
+--         ["ik"] = "@key.inner",
+--         ["av"] = "@value.outer",
+--         ["iv"] = "@value.inner",
+--       },
+--     },
+--   },
+-- }
+
+-- require'nvim-treesitter.configs'.setup {
+--   autotag = {
+--     enable = true,
+--   }
+-- }
+
+-- require("nvim-treesitter.configs").setup {
+--   highlight = {
+--       -- ...
+--   },
+--   -- ...
+--   rainbow = {
+--     enable = true,
+--     extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+--     max_file_lines = nil, -- Do not enable for files with more than n lines, int
+--     -- colors = {}, -- table of hex strings
+--     -- termcolors = {} -- table of colour name strings
+--   }
+-- }
+

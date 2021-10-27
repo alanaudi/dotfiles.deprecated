@@ -13,14 +13,26 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Completion  ---------------------------------------------------
   -- ]
-  use 'ervandew/supertab'
+  -- use 'ervandew/supertab'
+  use 'hrsh7th/nvim-cmp'
+
 
   -- [
   --   Colorscheme / Theme  ------------------------------------------
   -- ]
   -- use 'Pocco81/Catppuccino.nvim'
   use 'projekt0n/github-nvim-theme'
-
+  -- use 'Mofiqul/vscode.nvim'
+  -- use 'folke/tokyonight.nvim'
+  -- use 'glepnir/zephyr-nvim'
+  -- use 'navarasu/onedark.nvim'                                       -- NOTE: not suitable for hop
+  -- use 'olimorris/onedarkpro.nvim'
+  -- use 'joshdick/onedark.vim'
+  -- use 'sainnhe/edge'                                                -- NOTE: Nice !!
+  -- use 'marko-cerovac/material.nvim'                                 -- NOTE: Nice !!
+  -- use 'tomasiser/vim-code-dark'                                     -- WARNING: Git sign issue
+  -- use 'haishanh/night-owl.vim'                                      -- WARNING: Git sign issue
+  -- use 'mangeshrex/uwu.vim'                                          -- WARNING:indentline issue
 
   -- [
   --   Editor  -------------------------------------------------------
@@ -82,6 +94,7 @@ return require'packer'.startup(function(use) -------------------------
   use 'cespare/vim-toml'                                               -- toml
   use 'joelbeedle/pseudo-syntax'
   use 'hjson/vim-hjson'
+  use 'chemzqm/vim-jsx-improve'
 
   -- [
   --   Status Line  --------------------------------------------------
@@ -98,7 +111,7 @@ return require'packer'.startup(function(use) -------------------------
   }
 
   -- [
-  --   UI / UX  --------------------------------------------------
+  --   UI / UX  ------------------------------------------------------
   -- ]
   use 'norcalli/nvim-colorizer.lua'
   use 'lukas-reineke/indent-blankline.nvim'
@@ -106,7 +119,8 @@ return require'packer'.startup(function(use) -------------------------
     'phaazon/hop.nvim',
     as = 'hop',
     config = function()
-      -- you can configure Hop the way you like here; see :h hop-config
+      -- you can configure Hop the way you like here;
+      -- see :h hop-config
       require'hop'.setup { keys = 'weruioasdfghjklxcvbnm' }
     end
   }
@@ -116,6 +130,9 @@ return require'packer'.startup(function(use) -------------------------
 
   -- [
   --   Statistic  --------------------------------------------------
+
+  -- [
+  --   Statistic  ----------------------------------------------------
   -- ]
   use 'dstein64/vim-startuptime'
 
@@ -134,7 +151,7 @@ return require'packer'.startup(function(use) -------------------------
 
 
   -- [
-  --   To Be Continued  --------------------------------------------------
+  --   To Be Continued  ----------------------------------------------
   -- ]
   -- tabout
   -- use 'abecodes/tabout.nvim'
@@ -157,4 +174,4 @@ return require'packer'.startup(function(use) -------------------------
     config = function() require('orgmode').setup() end
   }
 
-end) ---------------------------------------------------------------------------
+end) -----------------------------------------------------------------
