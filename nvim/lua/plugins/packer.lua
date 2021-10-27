@@ -39,6 +39,14 @@ return require'packer'.startup(function(use) -----------------------------------
   -- syntax highlight
   use 'cespare/vim-toml'
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use 'singlexyz/treesitter-frontend-textobjects'                                -- WARN: how to use ??
+  use {
+    'windwp/nvim-ts-autotag',                                                    -- WARN: seems not working
+    config = function() require'nvim-ts-autotag'.setup() end
+  }
+  use 'p00f/nvim-ts-rainbow'
+
 
   -- status line
   use {
@@ -68,13 +76,13 @@ return require'packer'.startup(function(use) -----------------------------------
   use 'norcalli/nvim-colorizer.lua'
 
   -- tabout
-  use 'abecodes/tabout.nvim'
+  -- use 'abecodes/tabout.nvim'
 
   -- tabs
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
+  -- use {
+  --   'romgrk/barbar.nvim',
+  --   requires = { 'kyazdani42/nvim-web-devicons' }
+  -- }
 
   -- faster
   use {
@@ -124,4 +132,21 @@ return require'packer'.startup(function(use) -----------------------------------
     'kristijanhusak/orgmode.nvim',
     config = function() require('orgmode').setup() end
   }
+
+  -- html
+  use 'AndrewRadev/tagalong.vim'
+
+  -- markdown preview
+  use 'ellisonleao/glow.nvim'
+
+  -- file search
+  use 'Shougo/denite.nvim'
+
+  -- firefox
+  use {
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end
+  }
+
+
 end) ---------------------------------------------------------------------------

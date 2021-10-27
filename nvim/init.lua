@@ -53,6 +53,8 @@ local modules = {
   'plugins/bufferline',
   'plugins/hop',
   'plugins/indent',
+  'plugins/markdown',
+  'plugins/treesitter',
 }
 
 for i = 1, #modules, 1 do
