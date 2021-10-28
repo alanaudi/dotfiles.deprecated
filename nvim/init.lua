@@ -55,6 +55,7 @@ local modules = {
   'plugins/indent',
   'plugins/markdown',
   'plugins/treesitter',
+  -- 'plugins/completion',
 }
 
 for i = 1, #modules, 1 do

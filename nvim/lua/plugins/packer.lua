@@ -11,17 +11,15 @@ return require'packer'.startup(function(use) -------------------------
   use { 'wbthomason/packer.nvim', opt = true }
 
   -- [
-  --   Completion  ---------------------------------------------------
+  --   Auto Completion  ---------------------------------------------------
   -- ]
-  -- use 'ervandew/supertab'
-  use 'hrsh7th/nvim-cmp'
-
+  -- use 'ervandew/supertab'                                           -- standalone useful plugin
 
   -- [
   --   Colorscheme / Theme  ------------------------------------------
   -- ]
-  -- use 'Pocco81/Catppuccino.nvim'
   use 'projekt0n/github-nvim-theme'
+  -- use 'Pocco81/Catppuccino.nvim'
   -- use 'Mofiqul/vscode.nvim'
   -- use 'folke/tokyonight.nvim'
   -- use 'glepnir/zephyr-nvim'
@@ -86,15 +84,32 @@ return require'packer'.startup(function(use) -------------------------
   }
 
   -- [
+  --   LSP  ----------------------------------------------------------
+  -- ]
+  use 'hrsh7th/nvim-cmp'
+  use 'neovim/nvim-lspconfig'                                          -- collection of configurations for built-in LSP client
+  use 'hrsh7th/cmp-nvim-lsp'                                           -- completion source for nvim-cmp
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-buffer'
+
+  -- [
+  --   Snippets  -----------------------------------------------------
+  -- ]
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'                                       -- completion source for nvim-cmp
+
+  -- [
   --   Syntax Highlight  ---------------------------------------------
   -- ]
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  -- use 'nvim-treesitter/nvim-treesitter-textobjects'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }         -- incremental parsing lib
+  -- use 'nvim-treesitter/nvim-treesitter-textobjects'                 -- additional textobjexts for treesitter
   -- use 'singlexyz/treesitter-frontend-textobjects'                   -- TODO: how to use ??
   use 'cespare/vim-toml'                                               -- toml
   use 'joelbeedle/pseudo-syntax'
   use 'hjson/vim-hjson'
   use 'chemzqm/vim-jsx-improve'
+
 
   -- [
   --   Status Line  --------------------------------------------------
@@ -129,7 +144,9 @@ return require'packer'.startup(function(use) -------------------------
   use 'camspiers/lens.vim'
 
   -- [
-  --   Statistic  --------------------------------------------------
+  --   Debug  ----------------------------------------------------
+  -- ]
+  use 'puremourning/vimspector'
 
   -- [
   --   Statistic  ----------------------------------------------------
