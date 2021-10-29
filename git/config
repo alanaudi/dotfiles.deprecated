@@ -2,7 +2,7 @@
 	name = alanaudi
 	email = alanaudi.tw@gmail.com
 [alias]
-	s = status
+	s = status -s
 	co = checkout
 	cb = checkout -b
 	cm = commit -m
