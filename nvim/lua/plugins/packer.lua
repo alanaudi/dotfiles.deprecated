@@ -185,10 +185,11 @@ return require'packer'.startup(function(use) -------------------------
   -- file search
   -- use 'Shougo/denite.nvim'
 
+  -- FIX: color issue !!
   -- org-mode
-  use {
-    'kristijanhusak/orgmode.nvim',
-    config = function() require('orgmode').setup() end
-  }
+  -- use {
+  --   'kristijanhusak/orgmode.nvim',
+  --   config = function() require('orgmode').setup() end
+  -- }
 
 end) -----------------------------------------------------------------
