@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+export XDG_CONFIG_HOME="$HOME/.config"
+
+# zsh plugin manager
+eval "$(sheldon source)"
+
+export NVM_DIR="$HOME/.config/nvm"
+# This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+# This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
+alias bd="brew bundle dump && mv Brewfile $HOME/.config/macos/."
+alias vi="nvim"
+alias ls="exa"
+alias merry="ssh merry.ee.ncku.edu.tw"
+alias v="/usr/local/bin/nvim"
+alias git="LANG=en_US git"
+
+source /Users/alanaudi/.config/broot/launcher/bash/br
