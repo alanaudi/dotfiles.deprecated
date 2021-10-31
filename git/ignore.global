@@ -13,3 +13,4 @@ completion.lua
 lsp.lua
 nvm/
 submodules/
+github-copilot/
