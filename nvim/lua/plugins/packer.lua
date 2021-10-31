@@ -13,7 +13,7 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Auto Completion  ---------------------------------------------------
   -- ]
-  -- use 'ervandew/supertab'                                           -- standalone useful plugin
+  use 'ervandew/supertab'                                           -- standalone useful plugin
 
   -- [
   --   Colorscheme / Theme  ------------------------------------------
@@ -30,7 +30,7 @@ return require'packer'.startup(function(use) -------------------------
   -- use 'marko-cerovac/material.nvim'                                 -- NOTE: Nice !!
   -- use 'tomasiser/vim-code-dark'                                     -- WARNING: Git sign issue
   -- use 'haishanh/night-owl.vim'                                      -- WARNING: Git sign issue
-  -- use 'mangeshrex/uwu.vim'                                          -- WARNING:indentline issue
+  -- use 'mangeshrex/uwu.vim'                                          -- WARNING: indentline issue
 
   -- [
   --   Editor  -------------------------------------------------------
@@ -55,7 +55,8 @@ return require'packer'.startup(function(use) -------------------------
       }
       end
   }
-  use 'p00f/nvim-ts-rainbow'                                           -- TODO: seems not working
+  use 'github/copilot.vim'
+  -- use 'p00f/nvim-ts-rainbow'                                        -- TODO: seems not working
   use {
     'windwp/nvim-ts-autotag',
     config = function() require'nvim-ts-autotag'.setup() end
@@ -144,9 +145,9 @@ return require'packer'.startup(function(use) -------------------------
   use 'camspiers/lens.vim'
 
   -- [
-  --   Debug  ----------------------------------------------------
+  --   Debug  --------------------------------------------------------
   -- ]
-  use 'puremourning/vimspector'
+  -- use 'puremourning/vimspector'
 
   -- [
   --   Statistic  ----------------------------------------------------
