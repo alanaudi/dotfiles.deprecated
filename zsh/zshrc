@@ -1,5 +1,24 @@
+# XDG based config path
 export XDG_CONFIG_HOME="$HOME/.config"
+# Personal binary directory
 export PATH="$HOME/.bin:$PATH"
+# Rust path
+source $HOME/.cargo/env
+# Zsh package manager
 eval "$(sheldon source)"
+# NVM
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NODE_OPTIONS="--max_old_space_size=4096"
 
+# Utils
+function gcl() {
+  git clone git@github.com:$1
+}
+
+# Alias
 alias v="nvim"
+alias ls="exa -1"
+alias la="exa -a1"
+alias merry="ssh alanaudi@merry.ee.ncku.edu.tw"

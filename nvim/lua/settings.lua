@@ -35,3 +35,4 @@ g.mapleader = ' '
 
 map('n', '<leader>f.', ':e $MYVIMRC<CR>')
 map('n', '<leader>f,', ':e $HOME/.config/nvim/lua/settings.lua<CR>')
+map('n', '<leader>fp', ':e $HOME/.config/nvim/lua/plugins/packer.lua<CR>')
