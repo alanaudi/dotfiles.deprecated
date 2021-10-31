@@ -9,7 +9,6 @@ hydra/
 broot/
 doom/
 iterm2/
-completion.lua
 lsp.lua
 nvm/
 submodules/
