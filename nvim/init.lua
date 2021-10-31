@@ -55,6 +55,7 @@ local modules = {
   'plugins/indent',
   'plugins/markdown',
   'plugins/treesitter',
+  'plugins/highlight',
   -- 'plugins/completion',
 }
 

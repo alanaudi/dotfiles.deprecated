@@ -13,7 +13,7 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Auto Completion  ---------------------------------------------------
   -- ]
-  use 'ervandew/supertab'                                           -- standalone useful plugin
+  use 'ervandew/supertab'                                              -- standalone useful plugin
 
   -- [
   --   Colorscheme / Theme  ------------------------------------------
@@ -40,6 +40,8 @@ return require'packer'.startup(function(use) -------------------------
   use 'karb94/neoscroll.nvim'
   use 'xiyaowong/accelerated-jk.nvim'
   use 'AndrewRadev/tagalong.vim'
+  use 'machakann/vim-highlightedyank'
+  use 'kshenoy/vim-signature'
   use {
     'windwp/nvim-autopairs',
     config = function() require'nvim-autopairs'.setup() end
@@ -129,7 +131,9 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   UI / UX  ------------------------------------------------------
   -- ]
+  -- use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }          -- WARN: Golang required ...
   use 'norcalli/nvim-colorizer.lua'
+  use 'dominikduda/vim_current_word'
   use 'lukas-reineke/indent-blankline.nvim'
   use {
     'phaazon/hop.nvim',
