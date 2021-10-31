@@ -41,24 +41,24 @@ cmd 'autocmd BufWritePost packer.lua PackerCompile'
 --
 -- -----------------------------------------------------------------------------
 local modules = {
-  'settings',                                                                    -- basic settings
-  'packer',                                                              -- package manager
-  'autosave',
-  'gitsigns',
-  'statusline',
-  'theme',
-  'neoscroll',
-  'jk',
-  'color',
-  'bufferline',
-  'hop',
-  'indent',
-  'markdown',
-  'treesitter',
-  'highlight',
-  -- 'completion',
+  'settings',
+  'plugins/packer',                                                              -- package manager
+  'plugins/autosave',
+  'plugins/gitsigns',
+  'plugins/statusline',
+  'plugins/theme',
+  'plugins/neoscroll',
+  'plugins/jk',
+  'plugins/color',
+  'plugins/bufferline',
+  'plugins/hop',
+  'plugins/indent',
+  'plugins/markdown',
+  'plugins/treesitter',
+  'plugins/highlight',
+  -- 'plugins/completion',
 }
 
 for i = 1, #modules, 1 do
-  pcall(require, 'plugins/'..modules[i])
+  pcall(require, modules[i])
 end
