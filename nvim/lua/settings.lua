@@ -14,18 +14,19 @@ local function map(mode, lhs, rhs, opts)
 end
 
 -- general
-o.colorcolumn = '80'                                                             -- highlight column
-o.cursorline = true                                                              -- highlight current line
-o.mouse = 'a'                                                                    -- enable mouse support
-o.number = true                                                                  -- show line number
+o.colorcolumn = '80'                                                   -- highlight column
+o.cursorline = true                                                    -- highlight current line
+o.mouse = 'a'                                                          -- enable mouse support
+o.relativenumber = true                                                -- show line number
+o.number = true                                                        -- show line number
 o.termguicolors = true
 o.smartindent = true
-o.ignorecase = true                                                              -- ignores acse when searching
+o.ignorecase = true                                                    -- ignores acse when searching
 o.smartcase = true
-o.wrap = false                                                                   -- set nowrap
+o.wrap = false                                                         -- set nowrap
 
 -- live completion
-o.inccommand = 'nosplit'                                                         -- incremental search
+o.inccommand = 'nosplit'                                               -- incremental search
 
 -- search
 o.hlsearch = true
