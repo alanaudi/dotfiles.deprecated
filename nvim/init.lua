@@ -41,7 +41,6 @@ cmd 'autocmd BufWritePost packer.lua PackerCompile'
 --
 -- -----------------------------------------------------------------------------
 local modules = {
-  'settings',
   'plugins/packer',                                                              -- package manager
   'plugins/autosave',
   'plugins/gitsigns',
@@ -56,7 +55,8 @@ local modules = {
   'plugins/markdown',
   'plugins/treesitter',
   'plugins/highlight',
-  -- 'plugins/completion',
+  'plugins/search',
+  'settings',
 }
 
 for i = 1, #modules, 1 do

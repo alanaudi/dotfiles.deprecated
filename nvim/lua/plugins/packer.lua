@@ -21,8 +21,7 @@ return require'packer'.startup(function(use) -------------------------
   use 'projekt0n/github-nvim-theme'
   -- use 'Pocco81/Catppuccino.nvim'
   -- use 'Mofiqul/vscode.nvim'
-  -- use 'folke/tokyonight.nvim'
-  -- use 'glepnir/zephyr-nvim'
+  -- use 'folke/tokyonight.nvim'ssdsds  -- use 'glepnir/zephyr-nvim'
   -- use 'navarasu/onedark.nvim'                                       -- NOTE: not suitable for hop
   -- use 'olimorris/onedarkpro.nvim'
   -- use 'joshdick/onedark.vim'
@@ -35,6 +34,8 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Editor  -------------------------------------------------------
   -- ]
+  use 'AndrewRadev/splitjoin.vim'
+  use 'andymass/vim-matchup'
   use 'Pocco81/AutoSave.nvim'                                          -- NOTE: automaticlallu save leaving insert mode
   use 'editorconfig/editorconfig-vim'                                  -- NOTE: .editorconfig
   use 'karb94/neoscroll.nvim'
@@ -86,27 +87,46 @@ return require'packer'.startup(function(use) -------------------------
     -- config = function() require'neogit'.setup() end
   }
 
-  -- [
-  --   LSP  ----------------------------------------------------------
-  -- ]
-  use 'hrsh7th/nvim-cmp'
+  ----------------------------- TODO:
   use 'neovim/nvim-lspconfig'                                          -- collection of configurations for built-in LSP client
-  use 'hrsh7th/cmp-nvim-lsp'                                           -- completion source for nvim-cmp
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-buffer'
-
+  -- use 'hrsh7th/cmp-cmdline'
   -- [
-  --   Snippets  -----------------------------------------------------
+  --   Completion  ---------------------------------------------------
   -- ]
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'                                       -- completion source for nvim-cmp
+  use 'rafamadriz/friendly-snippets'
+  use {
+    'hrsh7th/nvim-cmp',
+    after = 'friendly-snippets',
+    config = function() require'completion'.setup() end
+  }
+  use {
+    'L3MON4D3/LuaSnip',
+    after = 'nvim-cmp',
+    wants = 'friendly-snippets',
+    config = function() require'completion'.luasnip() end
+  }
+  use {
+    'saadparwaiz1/cmp_luasnip',                                        -- completion source for nvim-cmp
+    after = 'LuaSnip'
+  }
+  use {
+    'hrsh7th/cmp-nvim-lsp',
+    after = 'cmp_luasnip',
+  }
+  use {
+    'hrsh7th/cmp-buffer',
+    after = 'cmp-nvim-lsp'
+  }
+  use {
+    'hrsh7th/cmp-path',
+    after = 'cmp-buffer',
+  }
 
   -- [
   --   Syntax Highlight  ---------------------------------------------
   -- ]
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }         -- incremental parsing lib
-  -- use 'nvim-treesitter/nvim-treesitter-textobjects'                 -- additional textobjexts for treesitter
+  use 'nvim-treesitter/nvim-treesitter-textobjects'                    -- additional textobjexts for treesitter
   -- use 'singlexyz/treesitter-frontend-textobjects'                   -- TODO: how to use ??
   use 'cespare/vim-toml'                                               -- toml
   use 'joelbeedle/pseudo-syntax'
@@ -123,15 +143,20 @@ return require'packer'.startup(function(use) -------------------------
   }
 
   -- fzf
+  use 'nvim-lua/popup.nvim'
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {'nvim-telescope/telescope-symbols.nvim'}
   use {
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
   }
+  use 'nvim-telescope/telescope-media-files.nvim'
 
   -- [
   --   UI / UX  ------------------------------------------------------
   -- ]
   -- use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }          -- WARN: Golang required ...
+  -- use 'glepnir/dashboard-nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'dominikduda/vim_current_word'
   use 'lukas-reineke/indent-blankline.nvim'
@@ -189,6 +214,8 @@ return require'packer'.startup(function(use) -------------------------
 
   -- file search
   -- use 'Shougo/denite.nvim'
+  -- use 'ggandor/lightspeed.nvim'
+  -- use 'natecraddock/nvim-find'
 
   -- FIX: color issue !!
   -- org-mode

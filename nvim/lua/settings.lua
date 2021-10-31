@@ -37,3 +37,12 @@ g.mapleader = ' '
 map('n', '<leader>f.', ':e $MYVIMRC<CR>')
 map('n', '<leader>f,', ':e $HOME/.config/nvim/lua/settings.lua<CR>')
 map('n', '<leader>fp', ':e $HOME/.config/nvim/lua/plugins/packer.lua<CR>')
+map('n', '<leader>ff', '<cmd>Telescope find_files<CR>')
+map('n', '<leader>fg', '<cmd>Telescope live_grep<CR>')
+map('n', '<leader>fb', '<cmd>Telescope buffers<CR>')
+map('n', '<leader>fh', '<cmd>Telescope help_tags<CR>')
+map('n', '<leader>fm', '<cmd>Telescope media_files<CR>')
+map('n', 'gj', '<cmd>SplitjoinJoin<CR>')
+map('n', 'gl', '<cmd>SplitjoinSplit<CR>')
+map('n', '<leader>gg', '<cmd>Neogit<CR>')
+
