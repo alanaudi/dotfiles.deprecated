@@ -91,7 +91,7 @@ return require'packer'.startup(function(use) -------------------------
   use 'neovim/nvim-lspconfig'                                          -- collection of configurations for built-in LSP client
   -- use 'hrsh7th/cmp-cmdline'
   -- [
-  --   Completion  ---------------------------------------------------
+  --   FIX: Completion  ---------------------------------------------------
   -- ]
   -- use 'rafamadriz/friendly-snippets'
   -- use {
