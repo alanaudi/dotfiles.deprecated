@@ -1,4 +1,5 @@
 local cmd = vim.cmd
+local g = vim.g
 -- -------------------------------------------------------------------
 -- packer.nvim
 -- -------------------------------------------------------------------
@@ -34,6 +35,7 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Editor  -------------------------------------------------------
   -- ]
+  use 'unblevable/quick-scope'
   use 'AndrewRadev/splitjoin.vim'
   use 'andymass/vim-matchup'
   use 'Pocco81/AutoSave.nvim'                                          -- NOTE: automaticlallu save leaving insert mode
@@ -200,6 +202,18 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   To Be Continued  ----------------------------------------------
   -- ]
+
+  -- WARN: not useful, what happened ???
+  -- use {
+  --   'gukz/ftFt.nvim',
+  --   config = function()
+  --     -- g.ftFT_disable_keymap_n = 1
+  --     -- g.ftFT_disable_keymap_ydc = 1
+  --     -- g.ftFT_disable_keymap_v = 1
+  --     require'ftFT'.setup()
+  --   end
+  -- }
+
   -- tabout
   -- use 'abecodes/tabout.nvim'
 
