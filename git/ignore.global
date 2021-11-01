@@ -13,3 +13,5 @@ lsp.lua
 nvm/
 submodules/
 github-copilot/
+pyenv/
+.pyenv-version

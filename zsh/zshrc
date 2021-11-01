@@ -2,6 +2,10 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 # Personal binary directory
 export PATH="$HOME/.bin:$PATH"
+# pyenv
+export PYENV_ROOT="$XDG_CONFIG_HOME/pyenv"  # change pyenv root
+export PATH="$PYENV_ROOT/shims:$PATH" # same as $(pyenv init --path)
+eval "$(pyenv init -)"
 # Rust path
 source $HOME/.cargo/env
 # Zsh package manager
