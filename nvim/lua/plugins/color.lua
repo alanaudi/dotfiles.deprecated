@@ -22,4 +22,5 @@ require'colorizer'.setup {
   'javascript',
   'javascriptreact',
   'lua',
+  'conf',
 }
