@@ -150,7 +150,7 @@ return require'packer'.startup(function(use) -------------------------
     'nvim-telescope/telescope.nvim',
     requires = { 'nvim-lua/plenary.nvim' },
   }
-  use 'nvim-telescope/telescope-media-files.nvim'
+  use 'nvim-telescope/telescope-media-files.nvim'                      -- WARN: Linux supported ONLY
 
   -- [
   --   UI / UX  ------------------------------------------------------
