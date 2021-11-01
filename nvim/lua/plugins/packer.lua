@@ -93,34 +93,34 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Completion  ---------------------------------------------------
   -- ]
-  use 'rafamadriz/friendly-snippets'
-  use {
-    'hrsh7th/nvim-cmp',
-    after = 'friendly-snippets',
-    config = function() require'completion'.setup() end
-  }
-  use {
-    'L3MON4D3/LuaSnip',
-    after = 'nvim-cmp',
-    wants = 'friendly-snippets',
-    config = function() require'completion'.luasnip() end
-  }
-  use {
-    'saadparwaiz1/cmp_luasnip',                                        -- completion source for nvim-cmp
-    after = 'LuaSnip'
-  }
-  use {
-    'hrsh7th/cmp-nvim-lsp',
-    after = 'cmp_luasnip',
-  }
-  use {
-    'hrsh7th/cmp-buffer',
-    after = 'cmp-nvim-lsp'
-  }
-  use {
-    'hrsh7th/cmp-path',
-    after = 'cmp-buffer',
-  }
+  -- use 'rafamadriz/friendly-snippets'
+  -- use {
+  --   'hrsh7th/nvim-cmp',
+  --   after = 'friendly-snippets',
+  --   config = function() require'completion'.setup() end
+  -- }
+  -- use {
+  --   'L3MON4D3/LuaSnip',
+  --   after = 'nvim-cmp',
+  --   wants = 'friendly-snippets',
+  --   config = function() require'completion'.luasnip() end
+  -- }
+  -- use {
+  --   'saadparwaiz1/cmp_luasnip',                                        -- completion source for nvim-cmp
+  --   after = 'LuaSnip'
+  -- }
+  -- use {
+  --   'hrsh7th/cmp-nvim-lsp',
+  --   after = 'cmp_luasnip',
+  -- }
+  -- use {
+  --   'hrsh7th/cmp-buffer',
+  --   after = 'cmp-nvim-lsp'
+  -- }
+  -- use {
+  --   'hrsh7th/cmp-path',
+  --   after = 'cmp-buffer',
+  -- }
 
   -- [
   --   Syntax Highlight  ---------------------------------------------
@@ -224,4 +224,5 @@ return require'packer'.startup(function(use) -------------------------
   --   config = function() require('orgmode').setup() end
   -- }
 
+  -- use 'tzachar/cmp-fzy-buffer'
 end) -----------------------------------------------------------------
