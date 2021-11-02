@@ -26,9 +26,14 @@ function gstash() {
 function dev() {
   yarn dev
 }
+function cask() {
+  brew install --cask $1
+}
 
 # Alias
 alias v="nvim"
 alias ls="exa -1"
 alias la="exa -a1"
 alias merry="ssh alanaudi@merry.ee.ncku.edu.tw"
+alias git="LANG=en_US git"
+
