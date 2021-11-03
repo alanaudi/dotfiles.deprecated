@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#spotify">
-    <img src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=black&labelColor=black"/>
+    <img src="https://img.shields.io/badge/Spotify-1ED760?style=for-the-badge&logo=spotify&logoColor=white"/>
   </a>
 </p>
 
