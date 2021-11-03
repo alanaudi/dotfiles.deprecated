@@ -13,6 +13,12 @@
   <a href="#neovim">
     <img src="https://img.shields.io/badge/NeoVim-v0.6.0-%2357A143.svg?&style=flat-square&logo=neovim&labelColor=white"/>
   </a>
+  <a href="#kitty">
+    <img src="https://img.shields.io/badge/Kitty-v0.23.1-714628.svg?&style=flat-square"/>
+  </a>
+  <a href="#swift-bar">
+    <img src="https://img.shields.io/badge/Swiftbar-v1.4-3444D22.svg?&style=flat-square"/>
+  </a>
   
   
   
