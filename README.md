@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/MacOS-monterey-7535CB.svg?style=flat-square"/>
   </a>
   <a href="#spotify">
-    <img src="https://img.shields.io/badge/Spotify-1ED760?style=flat-squarefor-the-badge&logo=spotify&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Spotify-1ED760?style=flat-square&logo=spotify&logoColor=white"/>
   </a>
 </p>
 
