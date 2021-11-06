@@ -19,11 +19,9 @@
   <a href="#swift-bar">
     <img src="https://img.shields.io/badge/Swiftbar-v1.4-3444D22.svg?&style=flat-square"/>
   </a>
-  
-  
-  
-  
 </p>
+
+<img src="assets/cli.png" />
 
 <h2 id="cli" align="center">Command Line</h2>
 
