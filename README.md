@@ -22,6 +22,9 @@
 </p>
 
 <img src="assets/cli.png" />
+<img src="assets/nvim-telescope.png" />
+<img src="assets/nvim-test.png" />
+<img src="assets/nvim-hop.png" />
 
 <h2 id="cli" align="center">Command Line</h2>
 
