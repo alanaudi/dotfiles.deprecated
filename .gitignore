@@ -2,3 +2,9 @@
 nvim/plugged/
 # plugins compiled by packer.nvim
 nvim/plugin
+
+# raycast extensions
+raycast/
+
+# configstore
+configstore/
