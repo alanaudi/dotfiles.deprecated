@@ -8,3 +8,9 @@ raycast/
 
 # configstore
 configstore/
+
+# yarn
+yarn/
+
+# spotify-tui
+.spotify_token_cache.json
