@@ -57,6 +57,7 @@ local modules = {
   'plugins/treesitter',
   'plugins/search',
   'plugins/highlight',
+  'plugins/move',
   'settings',
 }
 
