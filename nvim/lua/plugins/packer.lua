@@ -19,10 +19,9 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Colorscheme / Theme  ------------------------------------------
   -- ]
-  use 'projekt0n/github-nvim-theme'
+     use 'projekt0n/github-nvim-theme'
   -- use 'Pocco81/Catppuccino.nvim'
   -- use 'Mofiqul/vscode.nvim'
-  -- use 'folke/tokyonight.nvim'ssdsds  -- use 'glepnir/zephyr-nvim'
   -- use 'navarasu/onedark.nvim'                                       -- NOTE: not suitable for hop
   -- use 'olimorris/onedarkpro.nvim'
   -- use 'joshdick/onedark.vim'
@@ -39,7 +38,7 @@ return require'packer'.startup(function(use) -------------------------
   use 'AndrewRadev/splitjoin.vim'
   use 'andymass/vim-matchup'
   use 'Pocco81/AutoSave.nvim'                                          -- NOTE: automaticlallu save leaving insert mode
-  use 'editorconfig/editorconfig-vim'                                  -- NOTE: .editorconfig
+  -- use 'folke/tokyonight.nvim'ssdsds  -- use 'glepnir/zephyr-nvim'
   use 'karb94/neoscroll.nvim'
   use 'xiyaowong/accelerated-jk.nvim'
   use 'AndrewRadev/tagalong.vim'
@@ -58,13 +57,13 @@ return require'packer'.startup(function(use) -------------------------
         -- or leave it empty to use the default settings
         -- refer to the configuration section below
       }
+      use 'editorconfig/editorconfig-vim'                                  -- NOTE: .editorconfig
       end
   }
   use 'github/copilot.vim'
   -- use 'p00f/nvim-ts-rainbow'                                        -- TODO: seems not working
   use {
     'windwp/nvim-ts-autotag',
-    config = function() require'nvim-ts-autotag'.setup() end
   }
 
   -- [
@@ -83,12 +82,12 @@ return require'packer'.startup(function(use) -------------------------
     requires = { 'nvim-lua/plenary.nvim' },
     tag = 'release'                                                    -- use latest version
   }
+  config = function() require'nvim-ts-autotag'.setup() end
   use {
     'TimUntersberger/neogit',
     requires = 'nvim-lua/plenary.nvim'
     -- config = function() require'neogit'.setup() end
   }
-
   ----------------------------- TODO:
   use 'neovim/nvim-lspconfig'                                          -- collection of configurations for built-in LSP client
   -- use 'hrsh7th/cmp-cmdline'
@@ -106,8 +105,8 @@ return require'packer'.startup(function(use) -------------------------
   --   after = 'nvim-cmp',
   --   wants = 'friendly-snippets',
   --   config = function() require'completion'.luasnip() end
+  -- [
   -- }
-  -- use {
   --   'saadparwaiz1/cmp_luasnip',                                        -- completion source for nvim-cmp
   --   after = 'LuaSnip'
   -- }
@@ -124,8 +123,9 @@ return require'packer'.startup(function(use) -------------------------
   --   after = 'cmp-buffer',
   -- }
 
-  -- [
+
   --   Syntax Highlight  ---------------------------------------------
+  -- use {
   -- ]
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }         -- incremental parsing lib
   use 'nvim-treesitter/nvim-treesitter-textobjects'                    -- additional textobjexts for treesitter
@@ -144,7 +144,6 @@ return require'packer'.startup(function(use) -------------------------
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
 
-  -- fzf
   use 'nvim-lua/popup.nvim'
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use {'nvim-telescope/telescope-symbols.nvim'}
@@ -159,9 +158,11 @@ return require'packer'.startup(function(use) -------------------------
   -- ]
   -- use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }          -- WARN: Golang required ...
   -- use 'glepnir/dashboard-nvim'
+  -- fzf
   use 'norcalli/nvim-colorizer.lua'
   use 'dominikduda/vim_current_word'
   use 'lukas-reineke/indent-blankline.nvim'
+  use 'matze/vim-move'
   use {
     'phaazon/hop.nvim',
     as = 'hop',
@@ -169,6 +170,7 @@ return require'packer'.startup(function(use) -------------------------
       -- you can configure Hop the way you like here;
       -- see :h hop-config
       require'hop'.setup { keys = 'weruioasdfghjklxcvbnm' }
+    end) -----------------------------------------------------------------
     end
   }
   -- animation focus
@@ -196,7 +198,7 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Note Taking  --------------------------------------------------
   -- ]
-  use 'vimwiki/vimwiki'
+  -- use 'vimwiki/vimwiki'
 
 
   -- [
@@ -231,7 +233,6 @@ return require'packer'.startup(function(use) -------------------------
   -- use 'ggandor/lightspeed.nvim'
   -- use 'natecraddock/nvim-find'
 
-  -- FIX: color issue !!
   -- org-mode
   -- use {
   --   'kristijanhusak/orgmode.nvim',
@@ -239,4 +240,4 @@ return require'packer'.startup(function(use) -------------------------
   -- }
 
   -- use 'tzachar/cmp-fzy-buffer'
-end) -----------------------------------------------------------------
+  -- FIX: color issue !!
