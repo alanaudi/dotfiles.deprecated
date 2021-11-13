@@ -16,3 +16,6 @@ github-copilot/
 pyenv/
 .pyenv-version
 .cache/
+
+# nextjs
+nextjs-nodejs/
