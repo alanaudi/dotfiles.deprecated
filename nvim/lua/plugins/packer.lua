@@ -160,6 +160,13 @@ return require'packer'.startup(function(use) -------------------------
   -- ]
   -- use { 'RRethy/vim-hexokinase', run = 'make hexokinase' }          -- WARN: Golang required ...
   -- use 'glepnir/dashboard-nvim'
+  -- use {
+  --   'filipdutescu/renamer.nvim',                                    -- TODO: test needed
+  --   branch = 'master',
+  --   requires = { {'nvim-lua/plenary.nvim'} }
+  -- }
+  use 'DanilaMihailov/beacon.nvim'
+  -- use 'edluffy/specs.nvim'                                          -- TODO: not work ???
   use 'norcalli/nvim-colorizer.lua'
   use 'dominikduda/vim_current_word'
   use 'lukas-reineke/indent-blankline.nvim'
