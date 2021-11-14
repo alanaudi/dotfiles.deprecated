@@ -51,7 +51,6 @@ local modules = {
   'plugins/jk',
   'plugins/color',
   'plugins/bufferline',
-  'plugins/hop',
   'plugins/indent',
   'plugins/markdown',
   'plugins/treesitter',
