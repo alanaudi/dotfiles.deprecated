@@ -48,3 +48,9 @@ map('n', 'gj', '<cmd>SplitjoinJoin<CR>')
 map('n', 'gl', '<cmd>SplitjoinSplit<CR>')
 map('n', '<leader>gg', '<cmd>Neogit<CR>')
 
+map('i', '<C-h>', '<Left>')
+map('i', '<C-j>', '<Down>')
+map('i', '<C-k>', '<Up>')
+map('i', '<C-l>', '<Right>')
+
+
