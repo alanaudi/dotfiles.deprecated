@@ -22,7 +22,8 @@ return require'packer'.startup(function(use) -------------------------
   use 'projekt0n/github-nvim-theme'
   -- use 'Pocco81/Catppuccino.nvim'
   -- use 'Mofiqul/vscode.nvim'
-  -- use 'folke/tokyonight.nvim'ssdsds  -- use 'glepnir/zephyr-nvim'
+  -- use 'folke/tokyonight.nvim'
+  -- use 'glepnir/zephyr-nvim'
   -- use 'navarasu/onedark.nvim'                                       -- NOTE: not suitable for hop
   -- use 'olimorris/onedarkpro.nvim'
   -- use 'joshdick/onedark.vim'
@@ -35,7 +36,8 @@ return require'packer'.startup(function(use) -------------------------
   -- [
   --   Editor  -------------------------------------------------------
   -- ]
-  use 'unblevable/quick-scope'
+  -- use 'unblevable/quick-scope'
+  use 'ggandor/lightspeed.nvim'
   use 'AndrewRadev/splitjoin.vim'
   use 'andymass/vim-matchup'
   use 'Pocco81/AutoSave.nvim'                                          -- NOTE: automaticlallu save leaving insert mode
@@ -170,15 +172,15 @@ return require'packer'.startup(function(use) -------------------------
   use 'norcalli/nvim-colorizer.lua'
   use 'dominikduda/vim_current_word'
   use 'lukas-reineke/indent-blankline.nvim'
-  use {
-    'phaazon/hop.nvim',
-    as = 'hop',
-    config = function()
-      -- you can configure Hop the way you like here;
-      -- see :h hop-config
-      require'hop'.setup { keys = 'weruioasdfghjklxcvbnm' }
-    end
-  }
+  -- use {
+  --   'phaazon/hop.nvim',
+  --   as = 'hop',
+  --   config = function()
+  --     -- you can configure Hop the way you like here;
+  --     -- see :h hop-config
+  --     require'hop'.setup { keys = 'weruioasdfghjklxcvbnm' }
+  --   end
+  -- }
   -- animation focus
   use 'camspiers/animate.vim'
   use 'camspiers/lens.vim'
