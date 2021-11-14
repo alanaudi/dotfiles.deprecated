@@ -46,6 +46,7 @@ return require'packer'.startup(function(use) -------------------------
   use 'xiyaowong/accelerated-jk.nvim'
   use 'AndrewRadev/tagalong.vim'
   use 'machakann/vim-highlightedyank'
+  use 'rktjmp/highlight-current-n.nvim'
   use 'kshenoy/vim-signature'
   use 'matze/vim-move'
   use {

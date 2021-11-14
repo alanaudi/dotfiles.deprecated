@@ -6,6 +6,27 @@ require'telescope'.setup{
 }
 
 require'telescope'.load_extension('fzf')
+
+require("highlight_current_n").setup({
+  highlight_group = "IncSearch" -- highlight group name to use for highlight
+})
+
+vim.api.nvim_set_keymap('n', 'n', "<cmd>lua require'highlight_current_n'.n()<cr>", {})
+vim.api.nvim_set_keymap('n', 'N', "<cmd>lua require'highlight_current_n'.N()<cr>", {})
+vim.api.nvim_exec(
+[[
+  augroup ClearSearchHL
+    autocmd!
+    " You may only want to see hlsearch /while/ searching, you can automatically
+    " toggle hlsearch with the following autocommands
+    autocmd CmdlineEnter /,\? set hlsearch
+    autocmd CmdlineLeave /,\? set nohlsearch
+    " this will apply similar n|N highlighting to the first search result
+    " careful with escaping ? in lua, you may need \\?
+    autocmd CmdlineLeave /,\? lua require('highlight_current_n')['/,?']()
+  augroup END
+]],
+true)
 -- require'telescope.builtin'.symbols{ sources = { 'emoji', 'gitmoji'}}
 
 
