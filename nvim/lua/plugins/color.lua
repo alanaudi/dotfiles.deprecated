@@ -21,6 +21,7 @@ require'colorizer'.setup {
   },
   'javascript',
   'javascriptreact',
+  'typescriptreact',
   'lua',
   'conf',
   'markdown',
