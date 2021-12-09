@@ -68,5 +68,7 @@ map('i', '<C-h>', '<Left>')
 map('i', '<C-j>', '<Down>')
 map('i', '<C-k>', '<Up>')
 map('i', '<C-l>', '<Right>')
+map('i', '<C-f>', '<Right>')
+map('i', '<C-b>', '<Left>')
 
 
